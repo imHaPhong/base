@@ -4,6 +4,9 @@ let port = process.env.PORT || 3000;
 const dotenv = require('dotenv')
 const db = require('mongoose')
 const path = require('path')
+const adminRouter = require('./routers/admin')
+const loginRouter = require('./routers/login')
+const userRouter = require('./routers/user')
 
 app.set('views', path.join(__dirname, 'views/pages/'))
 app.set('view engine', 'ejs');
@@ -16,25 +19,11 @@ dotenv.config()
 
 db.connect(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: true },() => console.log("connect success"))
 
-app.get('/', (req, res) => {
-    var mascots = [
-        { name: 'Sammy', organization: "DigitalOcean", birth_year: 2012},
-        { name: 'Tux', organization: "Linux", birth_year: 1996},
-        { name: 'Moby Dock', organization: "Docker", birth_year: 2013}
-    ];
-    var tagline = "No programming concept is complete without a cute animal mascot.";
-
-    res.render('index', {
-        mascots: mascots,
-        tagline: tagline
-    });
-})
-app.get('/about', (req, res) => {
-    res.render("about")
-})
-
-app.get('/login', (req, res) => {
-    res.render("login")
+app.use('/admin', adminRouter)
+app.use('/login',loginRouter)
+app.use('/user',userRouter)
+app.use((req, res) => {
+    res.send("4040")
 })
 
 app.listen(port, () => console.log("running in " + port))
