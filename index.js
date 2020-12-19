@@ -7,7 +7,7 @@ const path = require('path')
 const adminRouter = require('./routers/admin')
 const loginRouter = require('./routers/login')
 const userRouter = require('./routers/user')
-
+const shopRouter = require('./routers/shop')
 app.set('views', path.join(__dirname, 'views/pages/'))
 app.set('view engine', 'ejs');
 
@@ -22,8 +22,13 @@ db.connect(process.env.DB_CONNECT,{ useNewUrlParser: true, useUnifiedTopology: t
 app.use('/admin', adminRouter)
 app.use('/login',loginRouter)
 app.use('/user',userRouter)
+app.use('/shop', shopRouter)
+app.post('/upload', (req, res) => {
+    console.log(req.body);
+})
 app.use((req, res) => {
     res.send("4040")
 })
+
 
 app.listen(port, () => console.log("running in " + port))

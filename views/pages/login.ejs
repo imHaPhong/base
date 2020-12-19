@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
+
 <body>
-    <form action="/" class="loginForm">
-        <span class="loginHeader">Register an user account!</span>
-       <input type="text" placeholder="Name">
-        <input type="text" placeholder="Email">
-        <input type="text" placeholder="Password">
-        <input type="text" placeholder="Confim password">
-        <input type="submit">
-    </form>
+    <form action="/login" method="POST">
+        <div class="grid wide loginContainer">
+            <div class="loginBlock">
+                <div class="loginTitle">
+                    Log in to your account!
+                </div>
+                <div class="loginBtn ggLoginBtn">
+                    <a href=""><i class="fab fa-google"></i>
+                        Continue with Google</a>
+                </div>
+                <div class="loginErr <%if(err){%> showErr <%} %>">
+                    Email or password not correct!
+                </div>
+                <div class="loginBtn loginInput">
+                    <i class="fad fa-envelope"></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="loginBtn loginInput">
+                    <i class="fal fa-lock-alt"></i>                
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" class="login" value="LOG IN">
+                <span>Don't have any account? <a href="" class="textRegister">Register</a></span>
+            </div>
+        </div></form>
 </body>
+
 </html>

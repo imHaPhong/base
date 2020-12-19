@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { schema } = require('./user')
 const Schema = mongoose.Schema
 
 const postSchema = new Schema({
@@ -14,6 +15,26 @@ const postSchema = new Schema({
     body: {
         type: String,
         required: true
+    }, 
+    comment: [{
+        userID: {
+            type: Schema.Types.ObjectId,
+            required: true,
+            ref: "users"
+        }, 
+        content: {
+            type: String,
+            required: true
+        }, time: {
+            type: Date,
+            default: Date.now()
+        }
+    }]
+    , 
+    react: {
+        like: [{
+            type: Schema.Types.ObjectId
+        }]
     }
 })
 
