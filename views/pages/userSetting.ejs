@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./asset/css/base.css">
-    <link rel="stylesheet" href="./asset/css/grid.css">
-    <link rel="stylesheet" href="./asset/css/style.css">
-    <link rel="stylesheet" href="./asset/css/userSetting.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/setting.css">
 </head>
-
 <body>
     <div class="header">
         <div class="header__info">
-            <img src="https://images.foody.vn/usr/g2049/20486021/avt/s200x200/beauty-upload-api-foody-avatar-185ae09c-a630-4e85-aa50-23559d22adbb-200605235404.jpeg"
+            <img src="<%=user.avtar%>"
                 alt="" class="header__info__img">
-            <span class="header__info__userName">Tuấn Nguyễn</span>
+            <span class="header__info__userName"><%=user.firstName%></span>
         </div>
         <span class="header__viewActivity">
             <a href="#" class="header__viewActivity__link">Xem hoạt động</a>
@@ -43,24 +43,24 @@
             </li>
             <li class="mainMenu__item">
                 <a href="" class="mainMenu__item__link">
-                <i class="fas fa-history  mainMenu__item__icon"></i>
-                <div class="mainMenu__item__content">
-                    <span class="mainMenu__item__content__text">
-                        History
-                    </span>
-                    <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
-                </div>
+                    <i class="fas fa-history  mainMenu__item__icon"></i>
+                    <div class="mainMenu__item__content">
+                        <span class="mainMenu__item__content__text">
+                            History
+                        </span>
+                        <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
+                    </div>
                 </a>
             </li>
             <li class="mainMenu__item">
                 <a href="" class="mainMenu__item__link">
-                <i class="fal fa-credit-card mainMenu__item__icon"></i>
-                <div class="mainMenu__item__content">
-                    <span class="mainMenu__item__content__text">
-                        Payment
-                    </span>
-                    <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
-                </div>
+                    <i class="fal fa-credit-card mainMenu__item__icon"></i>
+                    <div class="mainMenu__item__content">
+                        <span class="mainMenu__item__content__text">
+                            Payment
+                        </span>
+                        <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
+                    </div>
                 </a>
             </li>
         </ul>
@@ -68,24 +68,24 @@
         <ul class="mainMenu__list">
             <li class="mainMenu__item">
                 <a href="" class="mainMenu__item__link">
-                <i class="fas fa-cog mainMenu__item__icon mainMenu__item__icon--disable"></i>
-                <div class="mainMenu__item__content">
-                    <span class="mainMenu__item__content__text">
-                        Payment
-                    </span>
-                    <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
-                </div>
+                    <i class="fas fa-cog mainMenu__item__icon mainMenu__item__icon--disable"></i>
+                    <div class="mainMenu__item__content">
+                        <span class="mainMenu__item__content__text">
+                            Payment
+                        </span>
+                        <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
+                    </div>
                 </a>
             </li>
             <li class="mainMenu__item">
-                <a href="" class="mainMenu__item__link">
-                <i class="fas fa-power-off mainMenu__item__icon mainMenu__item__icon--disable"></i>
-                <div class="mainMenu__item__content">
-                    <span class="mainMenu__item__content__text">
-                        Payment
-                    </span>
-                    <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
-                </div>
+                <a href="/logout" class="mainMenu__item__link">
+                    <i class="fas fa-power-off mainMenu__item__icon mainMenu__item__icon--disable"></i>
+                    <div class="mainMenu__item__content">
+                        <span class="mainMenu__item__content__text">
+                            Payment
+                        </span>
+                        <i class="fas fa-chevron-right mainMenu__item__content_icon"></i>
+                    </div>
                 </a>
             </li>
         </ul>

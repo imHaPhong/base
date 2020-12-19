@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const Shop = require('../models/shop')
 
 module.exports.verify = (req, res, next) => {
-    const token = req.header('auth-token')
+    const token = req.cookies.uID
     if (!token) return res.send('Access Denied')
 
     try {

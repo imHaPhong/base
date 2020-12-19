@@ -37,8 +37,7 @@ const userSchema = new Schema({
         default: 'User'
     }, 
     address: {
-        type: String,
-        required: true
+        type: String
     },
     point: {
         type: Number,

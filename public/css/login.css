@@ -23,6 +23,8 @@ html{
     margin: 10px 0;
 }
 .ggLoginBtn{
+    display:  block;
+    text-decoration: none;
     margin-bottom: 30px;
     cursor: pointer;
     background-color: rgb(219, 67, 67);
@@ -72,6 +74,7 @@ html{
     background-color: rgb(219, 67, 67);
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .textRegister{

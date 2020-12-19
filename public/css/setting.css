@@ -1,0 +1,93 @@
+.header{
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.header__info{
+    display: flex;
+    height: 100%;
+    padding: 5px 15px;
+    align-items: center;
+}
+.header__info__img{
+    object-fit: contain;
+    height: 90%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header__info__userName{
+    font-weight: 900;
+}
+
+.header__viewActivity{
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.header__viewActivity i{
+    font-size: 1.2rem;
+}
+
+.header__viewActivity__link{
+    padding: 0 3px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+.mainMenu__list{
+    color: #6F6F6F;
+    list-style-type: none;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.mainMenu__item__link{
+    height: 48px;
+    display: flex;
+    justify-content:space-between;
+    padding-left: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: #6F6F6F;
+}
+
+
+.mainMenu__item:last-child .mainMenu__item__content{
+    border-bottom: none;
+}
+
+.mainMenu__item__icon{
+    min-width: 35px;
+    border-radius: 50%;
+    background-color: #008CDD;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: center;
+    line-height: 35px;
+}
+
+.mainMenu__item__icon--disable{
+    background-color: #6F6F6F;;
+}
+
+.mainMenu__item__content{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0 10px;
+    line-height:48px;
+    border-bottom: 1px solid #EEEEEE;
+    align-items: center;
+}
+.mainMenu__item__content_icon{
+    font-size: 1.2rem;
+}

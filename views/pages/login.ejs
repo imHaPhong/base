@@ -9,10 +9,10 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
@@ -22,20 +22,20 @@
                 <div class="loginTitle">
                     Log in to your account!
                 </div>
-                <div class="loginBtn ggLoginBtn">
-                    <a href=""><i class="fab fa-google"></i>
-                        Continue with Google</a>
-                </div>
+                <a href="/login/gg" class="loginBtn ggLoginBtn">
+                    <i class="fab fa-google"></i>
+                        Continue with Google                
+                    </a>
                 <div class="loginErr <%if(err){%> showErr <%} %>">
                     Email or password not correct!
                 </div>
                 <div class="loginBtn loginInput">
                     <i class="fad fa-envelope"></i>
-                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Email" name="email">
                 </div>
                 <div class="loginBtn loginInput">
                     <i class="fal fa-lock-alt"></i>                
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" name="password">
                 </div>
                 <input type="submit" class="login" value="LOG IN">
                 <span>Don't have any account? <a href="" class="textRegister">Register</a></span>

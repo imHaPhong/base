@@ -11,6 +11,14 @@ exports.addPost = async (req, res) => {
     }
 }
 
+exports.getUserSetting = async (req, res) => {
+    const getUser = await User.findById(req.token._id)
+    delete getUser.password;
+    delete getUser.role;
+    console.log(getUser);
+    res.render('userSetting', {user: getUser})
+}
+
 exports.getAllPost = async (req, res) => {
     const listPost = await Post.find({ userID: req.token._id })
     res.send(listPost)
